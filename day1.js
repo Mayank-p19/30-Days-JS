@@ -203,3 +203,31 @@
 //  });
 
 //  console.log(newArray);
+
+let map = new Map();                    // Creating a Map
+map.set('name', 'Mayank');              // adding a value to the map
+console.log(map.get('name'));           // getting a value 
+
+console.log(map.has('name'));           
+
+map.delete('name');                     // deleting a key from the map
+
+console.log(map.get('name'));
+
+map.clear();
+
+console.log(map.size);                  // checking the size of the map
+
+map.set('name', 'john');                // returning the keys of the map
+for(let key of map.keys()){
+    console.log(key);
+}
+
+for(let value of map.values()){         // returns the value 
+    console.log(value);
+}
+
+for(let entry of map.entries()){        // returns both key and value
+    console.log(entry);
+}
+
