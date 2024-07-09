@@ -204,30 +204,43 @@
 
 //  console.log(newArray);
 
-let map = new Map();                    // Creating a Map
-map.set('name', 'Mayank');              // adding a value to the map
-console.log(map.get('name'));           // getting a value 
 
-console.log(map.has('name'));           
+//Map and its methods
+// let map = new Map();                    // Creating a Map
+// map.set('name', 'Mayank');              // adding a value to the map
+// console.log(map.get('name'));           // getting a value 
 
-map.delete('name');                     // deleting a key from the map
+// console.log(map.has('name'));           
 
-console.log(map.get('name'));
+// map.delete('name');                     // deleting a key from the map
 
-map.clear();
+// console.log(map.get('name'));
 
-console.log(map.size);                  // checking the size of the map
+// map.clear();
 
-map.set('name', 'john');                // returning the keys of the map
-for(let key of map.keys()){
-    console.log(key);
-}
+// console.log(map.size);                  // checking the size of the map
 
-for(let value of map.values()){         // returns the value 
-    console.log(value);
-}
+// map.set('name', 'john');                // returning the keys of the map
+// for(let key of map.keys()){
+//     console.log(key);
+// }
 
-for(let entry of map.entries()){        // returns both key and value
-    console.log(entry);
-}
+// for(let value of map.values()){         // returns the value 
+//     console.log(value);
+// }
 
+// for(let entry of map.entries()){        // returns both key and value
+//     console.log(entry);
+// }
+
+// Objects and its methods
+
+// const obj1 = {a:1, b:2};                    //assign method
+// const obj2 = {c:3, d:4};
+// Object.assign(obj1, obj2);
+// console.log(obj1);
+
+// const obj = { name: 'Mayank', age: 25};
+// console.log(Object.keys(obj));              //return the keys of the object
+
+// console.log(Object.values(obj));            // return the values
