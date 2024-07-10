@@ -244,3 +244,68 @@
 // console.log(Object.keys(obj));              //return the keys of the object
 
 // console.log(Object.values(obj));            // return the values
+
+  
+  const users = [                              // for loop example
+    { name: 'John', age: 25 },
+    { name: 'Jane', age: 29 },
+    { name: 'Jim', age: 22 },
+    { name: 'Jill', age: 32 },
+    { name: 'Jack', age: 27 }
+  ];
+  
+  let oldestUser = users[0];
+  
+  for (let i = 1; i < users.length; i++) {
+    if (users[i].age > oldestUser.age) {
+      oldestUser = users[i];
+    }
+  }
+  
+  console.log(oldestUser);
+  // Output: { name: 'Jill', age: 32 }
+  
+  const users2 = [                               // forEach loop
+    { name: 'John', age: 25 },
+    { name: 'Jane', age: 29 },
+    { name: 'Jim', age: 22 },
+    { name: 'Jill', age: 32 },
+    { name: 'Jack', age: 27 }
+  ];
+  
+  let totalAge = 0;
+  let names = [];
+  
+  users.forEach(user => {
+    totalAge += user.age;
+    if (user.age > 25) {
+      names.push(user.name);
+    }
+  });
+  
+  console.log(`Total Age: ${totalAge}`);
+  // Output: Total Age: 135
+  
+  console.log(`Names: ${names.join(', ')}`);
+  // Output: Names: Jane, Jill, Jack
+  
+
+  const users1 = [                                           // map method
+    { name: 'John', age: 25, email: 'john@example.com' },
+    { name: 'Jane', age: 29, email: 'jane@example.com' },
+    { name: 'Jim', age: 22, email: 'jim@example.com' },
+    { name: 'Jill', age: 32, email: 'jill@example.com' },
+    { name: 'Jack', age: 27, email: 'jack@example.com' }
+  ];
+  
+  const userStrings = users.map(user => `${user.name} is ${user.age} years old.`);
+  
+  console.log(userStrings);
+  // Output: [
+  //   'John is 25 years old.',
+  //   'Jane is 29 years old.',
+  //   'Jim is 22 years old.',
+  //   'Jill is 32 years old.',
+  //   'Jack is 27 years old.'
+  // ]
+  
