@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Mayank",
+    "Age": "22",
+    "Email": "mayank123@gmail.com",
+    "City": "Chandigarh",
+    "State": "Punjab",
+    "Skills": "JavaScript, Node.js, React"
+  },
+  {
+    "Name": "Abhishek",
+    "Age": "23",
+    "Email": "abhishek@gmail.com",
+    "City": "Delhi",
+    "State": "Delhi",
+    "Skills": "Python, Django"
+  }
+]
