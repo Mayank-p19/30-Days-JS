@@ -73,3 +73,41 @@ csv()
 .catch((error) => {
     console.log('Error converting csv to josn:', error);
 });
+
+
+
+const express = require('express');
+const jwt = require('jsonwebtoken');
+
+const app = express();
+const port = 3000;
+
+const secretKey = 'your-256-bit-secret';
+
+app.post('/login', (req, res) => {
+  const user = { id: 1, username: 'mayank' }; // Mock user
+
+  // Sign the token
+  const token = jwt.sign(user, secretKey, { expiresIn: '1h' });
+
+  res.json({ token });
+});
+
+app.get('/protected', (req, res) => {
+  const token = req.headers['authorization'];
+
+  if (!token) {
+    return res.sendStatus(403);
+  }
+
+  try {
+    const decoded = jwt.verify(token, secretKey);
+    res.json({ message: 'You have access', decoded });
+  } catch (err) {
+    res.sendStatus(403);
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
